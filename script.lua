@@ -6,6 +6,9 @@ function patchfile(file) --patches a single .acf file
 	f:close()
 	if not filestring:match('"StateFlags"		"4"') then --search for a string that signifies a pending update
 		patch = patch + 1 --keep track of number of patched files
+		local f = io.open(file..".bak", "w") --write original data to backup file before making any changes
+		f:write(filestring)
+		f:close()
 		print("		removed pending update")
 		filestring = filestring:gsub('"StateFlags"		"(.-)"','"StateFlags"		"4"', 1)     --replace data in .acf to remove steams knowledge of the update
 		filestring = filestring:gsub('"UpdateResult"		"(.-)"','"UpdateResult"		"0"', 1)
