@@ -1,6 +1,7 @@
 # Steam Update Removal Utility
 
-This is a utility that allows you to play "Update Required" games without updating in offline mode.
+This is a utility that allows you to play "Update Required" games without updating in offline mode.  
+Useful when your internet is currently too slow or completely down and you just want to play a singleplayer game.
 
 Start by downloading this script bundled with the necessary Lua binaries from the releases tab.  
 If you only have one library in the standard location, you can leave the script as is.  
